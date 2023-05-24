@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Imagens icone/favicon.ico" type="image/x-icon">
+    <title>Imagem dinâmica</title>
+</head>
+<body>
+    <h1>Imagens dinâmicas</h1>
+    <p>Observe abaixo a imagem se adequando a largura do navegador conforme você muda seu tamanho</p>
+    <picture>
+        <!--A imagem grande possui 1000px
+            A imagem média possui 700px
+            A imagem pequena possui 300px
+        
+            Foi colocado 50px a mais para evitar que gere barra de rolagem lateral (que possui +/- 50px de largura)
+        
+            Preservar a sequencia (A imagem menor sempre deve vir ACIMA da imagem maior, e a imagem MAIOR deve vir ABAIXO de todas como referência)-->
+        <source media="(max-width:750px )" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width:1050px )" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="Foto dinâmica">
+    </picture>
+
+    <h1>Reproduzindo audio</h1>
+    <p>Vamos reproduzir audios em HTML</p>
+    <audio preload="metadata" controls >
+        <source src="midia/audio_1.mp3" type="audio/mpeg">
+    </audio>
+
+</body>
+</html>
